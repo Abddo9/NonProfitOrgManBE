@@ -14,6 +14,7 @@ class ProductRecord(models.Model):
     quantity = models.IntegerField(default=1)
     recived_on = models.DateTimeField("recived on")
     expires_on = models.DateTimeField("expires on")
+    is_used = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.quantity) + "- " +  self.product.name + " - " + self.source
